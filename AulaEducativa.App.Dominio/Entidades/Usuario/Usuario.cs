@@ -8,6 +8,5 @@ namespace AulaEducativa.App.Dominio.Entidades
         public string Contrasena { get; set; }
         public Grupo IdGrupo { get; set; }
         public Institucion IdInstitucion { get; set; }
-        //hola
     }
 }
