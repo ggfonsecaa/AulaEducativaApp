@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AulaEducativa.App.Persistencia.Repositorios
 {
-    internal class Repositorio<TEntity> : IRepositorio<TEntity> where TEntity : EntidadBase, IAgregadoRaiz
+    public class Repositorio<TEntity> : IRepositorio<TEntity> where TEntity : EntidadBase, IAgregadoRaiz
     {
         private AulaEducativaContext context;
         private DbSet<TEntity> dbSet;

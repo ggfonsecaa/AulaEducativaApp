@@ -6,7 +6,15 @@ namespace AulaEducativa.App.Dominio.Entidades
     {
         public string Email { get; set; }
         public string Contrasena { get; set; }
-        public Grupo IdGrupo { get; set; }
-        public Institucion IdInstitucion { get; set; }
+        public int IdInstitucion { get; set; } 
+        public virtual Institucion Institucion { get; set; }
+
+        public bool IniciarSesion(){
+            return false;
+        }
+
+        public bool RegistrarUsuario() {
+            return false;
+        }
     }
 }

@@ -7,10 +7,11 @@ namespace AulaEducativa.App.Dominio.Entidades
         public string Nombre { get; set; }
         public DateTime FechaLimite { get; set; }
         public DateTime FechaEntrega { get; set; }
-        public Estudiante IdEstudiante { get; set; }
-        public Curso IdCurso { get; set; }
-        public ICollection<ActividadAdjunto> ActividadAdjuntos { get; set; }
-        public Calificacion IdCalificacion { get; set; }
-
+        public string Calificacion { get; set; }
+        public string Adjunto { get; set;}
+        public int IdEstudiante { get; set; }
+        public int IdMateria { get; set; }
+        public virtual Estudiante Estudiante { get; set; }
+        public virtual Materia Materia { get; set; }
     }
 }

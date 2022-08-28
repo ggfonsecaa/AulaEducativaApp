@@ -6,9 +6,14 @@ namespace AulaEducativa.App.Dominio.Entidades
     {
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
-        public ICollection<Contacto> Contactos { get; set; }
-        public Usuario IdUsuario { get; set; }
         public int Edad { get; set; }
-        public ICollection<Curso> Cursos { get; set; }
+        public string Direccion { get; set; }
+        public string Telefono { get; set; }
+        public int IdUsuario { get; set; }
+        public virtual Usuario Usuario { get; set; }
+
+        public bool ActualizarInformacion() {
+            return false;
+        }
     }
 }
