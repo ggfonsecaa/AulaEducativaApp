@@ -7,7 +7,7 @@ namespace AulaEducativa.App.Persistencia
 {
     public class UnidadDeTrabajo : IDisposable, IUnidadDeTrabajo
     {
-        private AulaEducativaContext context = new AulaEducativaContext();
+        private AulaEducativaContext context;
         private Repositorio<Actividad> repositorioActividad;
         private Repositorio<Estudiante> repositorioEstudiante;
         private Repositorio<GradoAcademico> repositorioGradoAcademico;
@@ -105,6 +105,11 @@ namespace AulaEducativa.App.Persistencia
 
                 return repositorioUsuario;
             }
+        }
+
+
+        public UnidadDeTrabajo(AulaEducativaContext context) {
+            this.context = context;
         }
 
         public void Guardar()

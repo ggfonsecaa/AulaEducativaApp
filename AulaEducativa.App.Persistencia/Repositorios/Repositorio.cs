@@ -18,34 +18,41 @@ namespace AulaEducativa.App.Persistencia.Repositorios
             dbSet = context.Set<TEntity>();
         }
 
-        public IEnumerable<TEntity> ObtenerTodos() 
-        { 
-            return null;
+        public virtual IEnumerable<TEntity> ObtenerTodos() 
+        {
+            IQueryable<TEntity> query = dbSet;
+            return query.ToList();
         }
 
-        public TEntity ObtenerPorId(object id)
+        public virtual TEntity ObtenerPorId(object id)
         {
-            return null;
+            return dbSet.Find(id);
         }
 
-        public void Insertar(TEntity entity)
+        public virtual void Insertar(TEntity entity)
         {
-
+            dbSet.Add(entity);
         }
 
-        public void Eliminar(object id)
+        public virtual void Eliminar(object id)
         {
-
+            TEntity entidad = dbSet.Find(id);
+            Eliminar(entidad);
         }
 
-        public void Eliminar(TEntity entidad)
+        public virtual void Eliminar(TEntity entidad)
         {
-
+            if (context.Entry(entidad).State == EntityState.Detached)
+            {
+                dbSet.Attach(entidad);
+            }
+            dbSet.Remove(entidad);
         }
 
-        public void Actualizar(TEntity entidad)
+        public virtual void Actualizar(TEntity entidad)
         {
-
+            dbSet.Attach(entidad);
+            context.Entry(entidad).State = EntityState.Modified;
         }
     }
 }

@@ -14,8 +14,16 @@ namespace AulaEducativa.App.Dominio.Entidades
         public virtual ICollection<Actividad> Actividades { get; set; }
         public virtual ICollection<Materia> Materias { get; set; }
 
-        public bool ActualizarInformacion() {
-            return false;
+
+        public IPersona ActualizarInformacion(IPersona estudiante) {
+            return null;
+        }
+
+        public IPersona ConsultarInformacion(IPersona estudiante) {
+            return null;
+        }
+        public void AsignarGrado(GradoAcademico gradoAcademico) {
+
         }
     }
 }

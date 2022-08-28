@@ -6,5 +6,14 @@ namespace AulaEducativa.App.Dominio.Entidades
     {
         public string Nombre { get; set; }
         public virtual ICollection<Usuario> Usuarios { get; set; }
+
+
+        public string GenerarCodigo() {
+            return null;
+        }
+
+        public bool ValidarCodigoUsuario(string codigo) {
+            return true;
+        }
     }
 }

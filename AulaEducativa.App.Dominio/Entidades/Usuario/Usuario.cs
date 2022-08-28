@@ -16,5 +16,9 @@ namespace AulaEducativa.App.Dominio.Entidades
         public bool RegistrarUsuario() {
             return false;
         }
+
+        public void CerrarSesion() {
+            
+        }
     }
 }
