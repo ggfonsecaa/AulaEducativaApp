@@ -10,7 +10,9 @@ namespace AulaEducativa.App.Dominio.Entidades
         public string Direccion { get; set; }
         public string Telefono { get; set; }
         public int IdUsuario { get; set; }
+        public int IdGradoAcademico { get; set; }
         public virtual Usuario Usuario { get; set; }
+        public virtual GradoAcademico GradoAcademico { get; set; }
         public virtual ICollection<Actividad> Actividades { get; set; }
         public virtual ICollection<Materia> Materias { get; set; }
 

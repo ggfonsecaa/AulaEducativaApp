@@ -1,10 +1,7 @@
-﻿using AulaEducativa.App.Dominio.Interfaces;
-
-namespace AulaEducativa.App.Dominio.Entidades
+﻿namespace AulaEducativa.App.Dominio.Entidades
 {
     public class EntidadBase
     {
         public int Id { get; set; }
-
     }
 }

@@ -16,6 +16,5 @@ namespace AulaEducativa.App.Persistencia.Interfaces
         public void Eliminar(TEntity entidad);
 
         public void Actualizar(TEntity entidad);
-
     }
 }

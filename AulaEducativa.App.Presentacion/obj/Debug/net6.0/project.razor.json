@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\Guillermo\\source\\repos\\AulaEducativaApp\\AulaEducativa.App.Servicios\\AulaEducativa.App.Servicios.csproj",
+  "FilePath": "c:\\Users\\Guillermo\\source\\repos\\AulaEducativaApp\\AulaEducativa.App.Presentacion\\AulaEducativa.App.Presentacion.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",
@@ -16295,7 +16295,43 @@
     ],
     "CSharpLanguageVersion": 1000
   },
-  "RootNamespace": "AulaEducativa.App.Servicios",
-  "Documents": [],
+  "RootNamespace": "AulaEducativa.App.Presentacion",
+  "Documents": [
+    {
+      "FilePath": "c:\\Users\\Guillermo\\source\\repos\\AulaEducativaApp\\AulaEducativa.App.Presentacion\\Pages\\Privacy.cshtml",
+      "TargetPath": "Pages\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Guillermo\\source\\repos\\AulaEducativaApp\\AulaEducativa.App.Presentacion\\Pages\\Error.cshtml",
+      "TargetPath": "Pages\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Guillermo\\source\\repos\\AulaEducativaApp\\AulaEducativa.App.Presentacion\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Guillermo\\source\\repos\\AulaEducativaApp\\AulaEducativa.App.Presentacion\\Pages\\Shared\\_Layout.cshtml",
+      "TargetPath": "Pages\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Guillermo\\source\\repos\\AulaEducativaApp\\AulaEducativa.App.Presentacion\\Pages\\_ViewStart.cshtml",
+      "TargetPath": "Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Guillermo\\source\\repos\\AulaEducativaApp\\AulaEducativa.App.Presentacion\\Pages\\Index.cshtml",
+      "TargetPath": "Pages\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Guillermo\\source\\repos\\AulaEducativaApp\\AulaEducativa.App.Presentacion\\Pages\\_ViewImports.cshtml",
+      "TargetPath": "Pages\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
   "SerializationFormat": "0.2"
 }
