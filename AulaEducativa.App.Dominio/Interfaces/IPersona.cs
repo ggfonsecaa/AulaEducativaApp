@@ -9,7 +9,7 @@ namespace AulaEducativa.App.Dominio.Interfaces
         public int Edad { get; set; }
         public string Direccion { get; set; }
         public string Telefono { get; set; }
-        public int IdUsuario { get; set; }
+        public int UsuarioId { get; set; }
 
 
         public IPersona ActualizarInformacion(IPersona persona);

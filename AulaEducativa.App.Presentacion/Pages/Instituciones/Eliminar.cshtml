@@ -1,0 +1,28 @@
+﻿@page
+@model AulaEducativa.App.Presentacion.Pages.Instituciones.EliminarModel
+
+@{
+    ViewData["Title"] = "Instituciones - Eliminar";
+}
+
+<h1>Eliminar</h1>
+
+<h3>¿Está seguro que quiere borrar el registro seleccionado?</h3>
+<div>
+    <h4>Institución</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Institucion.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Institucion.Nombre)
+        </dd>
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="Institucion.Id" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-page="./Index">Regresar</a>
+    </form>
+</div>

@@ -117,6 +117,10 @@ namespace AulaEducativa.App.Persistencia
             context.SaveChanges();
         }
 
+        public Task<int> GuardarAsincrono() {
+            return context.SaveChangesAsync();
+        }
+
         private bool disposed = false;
 
         protected virtual void Dispose(bool disposing)

@@ -1,7 +1,13 @@
+using AulaEducativa.App.Persistencia;
+using AulaEducativa.App.Persistencia.Datos;
+using AulaEducativa.App.Persistencia.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<AulaEducativaContext>();
+builder.Services.AddScoped<IUnidadDeTrabajo, UnidadDeTrabajo>();
 
 var app = builder.Build();
 

@@ -1,0 +1,35 @@
+﻿@page
+@model AulaEducativa.App.Presentacion.Pages.Instituciones.IndexModel
+@{
+    ViewData["Title"] = "Instituciones";
+}
+
+<h1>Instituciones</h1>
+
+<p>
+    <a asp-page="Agregar">Crear nueva</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Instituciones.ElementAt(0).Nombre)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Instituciones)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    <a asp-page="./Editar" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-page="./Eliminar" asp-route-id="@item.Id">Borrar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

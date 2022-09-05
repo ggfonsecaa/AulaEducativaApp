@@ -20,5 +20,6 @@ namespace AulaEducativa.App.Persistencia.Interfaces
         public Repositorio<Usuario> RepositorioUsuario { get; }
 
         public void Guardar();
+        public Task<int> GuardarAsincrono();
     }
 }

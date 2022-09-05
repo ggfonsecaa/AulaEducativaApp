@@ -47,12 +47,6 @@ namespace AulaEducativa.App.Persistencia.Migrations
                     b.Property<DateTime>("FechaLimite")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("IdEstudiante")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdMateria")
-                        .HasColumnType("int");
-
                     b.Property<int>("MateriaId")
                         .HasColumnType("int");
 
@@ -66,7 +60,7 @@ namespace AulaEducativa.App.Persistencia.Migrations
 
                     b.HasIndex("MateriaId");
 
-                    b.ToTable("Actividades");
+                    b.ToTable("Actividad");
                 });
 
             modelBuilder.Entity("AulaEducativa.App.Dominio.Entidades.Estudiante", b =>
@@ -88,10 +82,7 @@ namespace AulaEducativa.App.Persistencia.Migrations
                     b.Property<int>("Edad")
                         .HasColumnType("int");
 
-                    b.Property<int?>("GradoAcademicoId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdUsuario")
+                    b.Property<int>("GradoAcademicoId")
                         .HasColumnType("int");
 
                     b.Property<string>("Nombres")
@@ -111,7 +102,7 @@ namespace AulaEducativa.App.Persistencia.Migrations
 
                     b.HasIndex("UsuarioId");
 
-                    b.ToTable("Estudiantes");
+                    b.ToTable("Estudiante");
                 });
 
             modelBuilder.Entity("AulaEducativa.App.Dominio.Entidades.GradoAcademico", b =>
@@ -128,7 +119,7 @@ namespace AulaEducativa.App.Persistencia.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("GradosAcademicos");
+                    b.ToTable("GradoAcademico");
                 });
 
             modelBuilder.Entity("AulaEducativa.App.Dominio.Entidades.Institucion", b =>
@@ -145,7 +136,7 @@ namespace AulaEducativa.App.Persistencia.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Instituciones");
+                    b.ToTable("Institucion");
                 });
 
             modelBuilder.Entity("AulaEducativa.App.Dominio.Entidades.Materia", b =>
@@ -159,9 +150,6 @@ namespace AulaEducativa.App.Persistencia.Migrations
                     b.Property<int>("GradoAcademicoId")
                         .HasColumnType("int");
 
-                    b.Property<int>("IdGradoAcademico")
-                        .HasColumnType("int");
-
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -170,7 +158,7 @@ namespace AulaEducativa.App.Persistencia.Migrations
 
                     b.HasIndex("GradoAcademicoId");
 
-                    b.ToTable("Materias");
+                    b.ToTable("Materia");
                 });
 
             modelBuilder.Entity("AulaEducativa.App.Dominio.Entidades.Profesor", b =>
@@ -192,10 +180,7 @@ namespace AulaEducativa.App.Persistencia.Migrations
                     b.Property<int>("Edad")
                         .HasColumnType("int");
 
-                    b.Property<int?>("GradoAcademicoId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdUsuario")
+                    b.Property<int>("GradoAcademicoId")
                         .HasColumnType("int");
 
                     b.Property<string>("Nombres")
@@ -215,7 +200,7 @@ namespace AulaEducativa.App.Persistencia.Migrations
 
                     b.HasIndex("UsuarioId");
 
-                    b.ToTable("Profesores");
+                    b.ToTable("Profesor");
                 });
 
             modelBuilder.Entity("AulaEducativa.App.Dominio.Entidades.Usuario", b =>
@@ -234,9 +219,6 @@ namespace AulaEducativa.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("IdInstitucion")
-                        .HasColumnType("int");
-
                     b.Property<int>("InstitucionId")
                         .HasColumnType("int");
 
@@ -244,7 +226,7 @@ namespace AulaEducativa.App.Persistencia.Migrations
 
                     b.HasIndex("InstitucionId");
 
-                    b.ToTable("Usuarios");
+                    b.ToTable("Usuario");
                 });
 
             modelBuilder.Entity("EstudianteMateria", b =>
@@ -267,13 +249,13 @@ namespace AulaEducativa.App.Persistencia.Migrations
                     b.HasOne("AulaEducativa.App.Dominio.Entidades.Estudiante", "Estudiante")
                         .WithMany("Actividades")
                         .HasForeignKey("EstudianteId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("AulaEducativa.App.Dominio.Entidades.Materia", "Materia")
                         .WithMany("Actividades")
                         .HasForeignKey("MateriaId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Estudiante");
@@ -283,15 +265,19 @@ namespace AulaEducativa.App.Persistencia.Migrations
 
             modelBuilder.Entity("AulaEducativa.App.Dominio.Entidades.Estudiante", b =>
                 {
-                    b.HasOne("AulaEducativa.App.Dominio.Entidades.GradoAcademico", null)
+                    b.HasOne("AulaEducativa.App.Dominio.Entidades.GradoAcademico", "GradoAcademico")
                         .WithMany("Estudiantes")
-                        .HasForeignKey("GradoAcademicoId");
+                        .HasForeignKey("GradoAcademicoId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
 
                     b.HasOne("AulaEducativa.App.Dominio.Entidades.Usuario", "Usuario")
                         .WithMany()
                         .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
+
+                    b.Navigation("GradoAcademico");
 
                     b.Navigation("Usuario");
                 });
@@ -301,7 +287,7 @@ namespace AulaEducativa.App.Persistencia.Migrations
                     b.HasOne("AulaEducativa.App.Dominio.Entidades.GradoAcademico", "GradoAcademico")
                         .WithMany("Materias")
                         .HasForeignKey("GradoAcademicoId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("GradoAcademico");
@@ -309,15 +295,19 @@ namespace AulaEducativa.App.Persistencia.Migrations
 
             modelBuilder.Entity("AulaEducativa.App.Dominio.Entidades.Profesor", b =>
                 {
-                    b.HasOne("AulaEducativa.App.Dominio.Entidades.GradoAcademico", null)
+                    b.HasOne("AulaEducativa.App.Dominio.Entidades.GradoAcademico", "GradoAcademico")
                         .WithMany("Profesores")
-                        .HasForeignKey("GradoAcademicoId");
+                        .HasForeignKey("GradoAcademicoId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
 
                     b.HasOne("AulaEducativa.App.Dominio.Entidades.Usuario", "Usuario")
                         .WithMany()
                         .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
+
+                    b.Navigation("GradoAcademico");
 
                     b.Navigation("Usuario");
                 });
@@ -327,7 +317,7 @@ namespace AulaEducativa.App.Persistencia.Migrations
                     b.HasOne("AulaEducativa.App.Dominio.Entidades.Institucion", "Institucion")
                         .WithMany("Usuarios")
                         .HasForeignKey("InstitucionId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Institucion");
@@ -338,13 +328,13 @@ namespace AulaEducativa.App.Persistencia.Migrations
                     b.HasOne("AulaEducativa.App.Dominio.Entidades.Estudiante", null)
                         .WithMany()
                         .HasForeignKey("EstudiantesId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("AulaEducativa.App.Dominio.Entidades.Materia", null)
                         .WithMany()
                         .HasForeignKey("MateriasId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
