@@ -1,3 +1,9 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 html {
   font-size: 14px;
 }
@@ -9,10 +15,151 @@ html {
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+  height: 100%;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+}
+
+.navigation-header {
+    display: flex;
+    height: 12%;
+    width: 100%;
+    box-shadow: rgba(0,0,0, 0.3) 0px 3px;
+}
+
+.navigation-app-data {
+    height: 100%;
+    width: 90%;
+    display: flex;
+}
+
+.app-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 10%;
+}
+
+.app-logo > img {
+    padding: 5px;
+}
+
+.app-name {
+    display: flex;
+    width: 90%;
+    align-items: center;
+}
+
+.navigation-options {
+    height: 100%;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .navigation-options > h6 {
+        margin: 0;
+    }
+
+.main-content {
+    display: flex;
+    width: 100%;
+    margin-top: 3px;
+    height: calc(80% - 3px);
+    border-bottom: 2px solid black;
+
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    height: 8%;
+}
+
+.navigation-menu {
+    display: flex;
+    width: 20%;
+    height: 100%;
+    border-right: 2px solid black;
+}
+
+    .navigation-menu .user-info {
+        display: flex;
+        margin: 5px;
+        height: 70px;
+    }
+
+        .navigation-menu .user-info .user-foto {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+        }
+
+        .navigation-menu .user-info .user-section {
+            display: flex;
+            margin: 5px;
+            justify-content: center;
+            flex-direction: column;
+            width: calc(100% - 50px);
+        }
+
+hr {
+    margin: 0;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.main-menu {
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+    .main-menu .menu-item {
+        border-radius: 5px;
+        height: 50px;
+        display: flex;
+    }
+
+        .main-menu .menu-item:hover {
+            background-color: rgb(255, 255, 255, 0.2);
+        }
+
+        .main-menu .menu-item:active {
+            background-color: rgb(255, 255, 255, 0.5);
+        }
+
+.content {
+    width: 80%;
+    padding: 10px;
+}
+
+.menu-item > a {
+    font-weight: 700;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }

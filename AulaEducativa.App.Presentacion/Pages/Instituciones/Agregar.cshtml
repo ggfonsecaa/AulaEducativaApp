@@ -2,29 +2,26 @@
 @model AulaEducativa.App.Presentacion.Pages.Instituciones.AgregarModel
 
 @{
-    ViewData["Title"] = "Instituciones - Agregar";
+    ViewData["Title"] = "Instituciones";
 }
 
-<h1>Agregar</h1>
+<h3 style="margin-bottom: 15px;">@ViewData["Title"]</h3>
 
-<h4>Institución</h4>
-<hr />
-<div class="row">
+<div>
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
+            <div class="form-group" style="margin-bottom: 20px;">
                 <label asp-for="Institucion.Nombre" class="control-label"></label>
                 <input asp-for="Institucion.Nombre" class="form-control" />
                 <span asp-validation-for="Institucion.Nombre" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Agregar" class="btn btn-primary" />
+                <button class="btn btn-secondary">
+                    <a asp-page="Index" style="color: white; text-decoration: none; width: 100%; height: 100%;">Regresar</a>
+                </button>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-page="Index">Regresar</a>
 </div>

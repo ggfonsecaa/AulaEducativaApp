@@ -5,6 +5,9 @@ using AulaEducativa.App.Persistencia.Interfaces;
 
 using Microsoft.EntityFrameworkCore;
 
+using System.Collections;
+using System.Linq.Expressions;
+
 namespace AulaEducativa.App.Persistencia.Repositorios
 {
     public class Repositorio<TEntity> : IRepositorio<TEntity> where TEntity : EntidadBase, IAgregadoRaiz
@@ -22,6 +25,39 @@ namespace AulaEducativa.App.Persistencia.Repositorios
         {
             IQueryable<TEntity> query = dbSet;
             return query.ToList();
+        }
+
+        public virtual IEnumerable<TEntity> ObtenerPorCondicion(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, string includeProperties = "", bool tracking = false)
+        {
+            IQueryable<TEntity> query = dbSet;
+
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+
+            foreach (var includeProperty in includeProperties.Split
+                (new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                query = query.Include(includeProperty);
+            }
+
+            if (tracking)
+            {
+                query = query.AsTracking();
+            }
+            else {
+                query = query.AsNoTracking();
+            }
+
+            if (orderBy != null)
+            {
+                return orderBy(query).ToList();
+            }
+            else
+            {
+                return query.ToList();
+            }
         }
 
         public virtual TEntity ObtenerPorId(object id)

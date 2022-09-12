@@ -1,0 +1,55 @@
+﻿@page
+@model AulaEducativa.App.Presentacion.Pages.Inscripcion.IndexModel
+@{
+    ViewData["Title"] = "Materias disponibles";
+}
+
+<h3 style="margin-bottom: 15px;">@ViewData["Title"]</h3>
+
+<form method="post">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Materias.ElementAt(0).Nombre)
+                </th>
+                <th>
+                    Profesor asignado
+                </th>
+                <th>
+                    Acciones
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Materias)
+            {
+                <tr class="row-cols-auto">
+                    <td class="col-md-5">
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td class="col-md-5">
+                        @if (item.GradoAcademico.Profesores.Count > 0) 
+                        {
+                            @($"{item.GradoAcademico.Profesores.ElementAt(0).Nombres} {item.GradoAcademico.Profesores.ElementAt(0).Apellidos}")
+                        } 
+                        else 
+                        {
+                            @("No hay profesor asignado")
+                        }
+                    </td>
+                    <td class="col-md-2">
+                        @if (item.Estudiantes.Any(x => x.Id == 1))
+                        {
+                            <input type="submit" value="Eliminar" asp-route-id="@item.Id" asp-route-action="delete" class="btn btn-danger" />
+                        } 
+                        else 
+                        {
+                            <input type="submit" value="Inscribir" asp-route-id="@item.Id" class="btn btn-primary"/>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>

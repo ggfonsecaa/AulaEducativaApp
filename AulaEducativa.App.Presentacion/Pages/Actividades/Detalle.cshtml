@@ -1,0 +1,59 @@
+﻿@page
+@model AulaEducativa.App.Presentacion.Pages.Actividades.DetalleModel
+
+@{
+    ViewData["Title"] = "Detalle actividad";
+}
+
+<h3 style="margin-bottom: 15px;">@ViewData["Title"]</h3>
+
+<div>
+    <div class="col-md-12">
+        <form method="post">
+            <input type="hidden" asp-for="Actividad.Id" />
+            <div class ="form-group col-md-12 row">
+                <div class="col-md-3">
+                    <label class="control-label">Materia</label>
+                    <input disabled asp-for="Actividad.Materia.Nombre" class="form-control" />
+                </div>
+
+                <div class="col-md-3">
+                    <label class="control-label">Nombre actividad</label>
+                    <input disabled asp-for="Actividad.Nombre" class="form-control" />
+                </div>
+
+                <div class="col-md-3">
+                    <label asp-for="Actividad.FechaLimite" class="control-label"></label>
+                    <input disabled asp-for="Actividad.FechaLimite" class="form-control" />
+                </div>
+
+                <div class="col-md-3">
+                    <label asp-for="Actividad.Calificacion" class="control-label"></label>
+                    <input disabled asp-for="Actividad.Calificacion" class="form-control" />
+                </div>
+            </div>
+
+            <div class="form-group col-md-12">
+                <label class="control-label">Descripción</label>
+                <textarea disabled class="form-control" style="resize: none;"></textarea>
+            </div>
+
+            <div class="form-group col-md-12 row" style="margin-bottom: 20px;">
+                <div class="col-md-3">
+                    <label asp-for="Actividad.FechaEntrega" class="control-label"></label>
+                    <input disabled asp-for="Actividad.FechaEntrega" class="form-control" />
+                </div>
+
+                <div class="col-md-9">
+                    <label asp-for="Actividad.Adjunto" class="control-label"></label>
+                    <input type="file" class="form-control" />
+                </div>
+            </div>
+
+            <input type="submit" value="Actualizar" class="btn btn-primary" />
+            <button class="btn btn-secondary">
+                <a asp-page="Index" style="color: white; text-decoration: none; width: 100%; height: 100%;">Regresar</a>
+            </button>
+        </form>
+    </div>
+</div>

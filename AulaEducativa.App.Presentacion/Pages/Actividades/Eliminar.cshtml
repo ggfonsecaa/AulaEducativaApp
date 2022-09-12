@@ -1,0 +1,20 @@
+﻿@page
+@model AulaEducativa.App.Presentacion.Pages.Actividades.EliminarModel
+
+@{
+    ViewData["Title"] = "Instituciones";
+}
+
+<h3 style="margin-bottom: 15px;">@ViewData["Title"]</h3>
+
+<h6 style="margin-bottom: 15px;">¿Está seguro que quiere borrar el registro seleccionado?</h6>
+
+<div>
+    <form method="post">
+        <input type="hidden" asp-for="Institucion.Id" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" />
+        <button class="btn btn-secondary">
+            <a asp-page="Index" style="color: white; text-decoration: none; width: 100%; height: 100%;">Regresar</a>
+        </button>
+    </form>
+</div>

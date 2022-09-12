@@ -16,16 +16,15 @@ namespace AulaEducativa.App.Dominio.Entidades
         [Display(Name = "Fecha límite")]
         public DateTime FechaLimite { get; set; }
 
-        [Required(ErrorMessage = "Este campo es requerido")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Display(Name = "Fecha de entrega")]
-        public DateTime FechaEntrega { get; set; }
+        public DateTime? FechaEntrega { get; set; }
 
         [StringLength(30, ErrorMessage = "El campo no debe tener más de 30 caracteres")]
         [Display(Name = "Calificación")]
-        public string Calificacion { get; set; }
-        public string Adjunto { get; set;}
+        public string? Calificacion { get; set; }
+        public string? Adjunto { get; set;}
         public int EstudianteId { get; set; }
         public int MateriaId { get; set; }
         public virtual Estudiante Estudiante { get; set; }
