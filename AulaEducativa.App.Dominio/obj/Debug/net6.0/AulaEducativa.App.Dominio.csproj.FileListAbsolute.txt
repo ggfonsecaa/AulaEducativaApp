@@ -10,3 +10,15 @@ C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Dominio\obj\D
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Dominio\obj\Debug\net6.0\refint\AulaEducativa.App.Dominio.dll
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Dominio\obj\Debug\net6.0\AulaEducativa.App.Dominio.pdb
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Dominio\obj\Debug\net6.0\ref\AulaEducativa.App.Dominio.dll
+C:\Users\HGCIII\EducaApp\AulaEducativaApp\AulaEducativa.App.Dominio\bin\Debug\net6.0\AulaEducativa.App.Dominio.deps.json
+C:\Users\HGCIII\EducaApp\AulaEducativaApp\AulaEducativa.App.Dominio\bin\Debug\net6.0\AulaEducativa.App.Dominio.dll
+C:\Users\HGCIII\EducaApp\AulaEducativaApp\AulaEducativa.App.Dominio\bin\Debug\net6.0\AulaEducativa.App.Dominio.pdb
+C:\Users\HGCIII\EducaApp\AulaEducativaApp\AulaEducativa.App.Dominio\obj\Debug\net6.0\AulaEducativa.App.Dominio.csproj.AssemblyReference.cache
+C:\Users\HGCIII\EducaApp\AulaEducativaApp\AulaEducativa.App.Dominio\obj\Debug\net6.0\AulaEducativa.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HGCIII\EducaApp\AulaEducativaApp\AulaEducativa.App.Dominio\obj\Debug\net6.0\AulaEducativa.App.Dominio.AssemblyInfoInputs.cache
+C:\Users\HGCIII\EducaApp\AulaEducativaApp\AulaEducativa.App.Dominio\obj\Debug\net6.0\AulaEducativa.App.Dominio.AssemblyInfo.cs
+C:\Users\HGCIII\EducaApp\AulaEducativaApp\AulaEducativa.App.Dominio\obj\Debug\net6.0\AulaEducativa.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\HGCIII\EducaApp\AulaEducativaApp\AulaEducativa.App.Dominio\obj\Debug\net6.0\AulaEducativa.App.Dominio.dll
+C:\Users\HGCIII\EducaApp\AulaEducativaApp\AulaEducativa.App.Dominio\obj\Debug\net6.0\refint\AulaEducativa.App.Dominio.dll
+C:\Users\HGCIII\EducaApp\AulaEducativaApp\AulaEducativa.App.Dominio\obj\Debug\net6.0\AulaEducativa.App.Dominio.pdb
+C:\Users\HGCIII\EducaApp\AulaEducativaApp\AulaEducativa.App.Dominio\obj\Debug\net6.0\ref\AulaEducativa.App.Dominio.dll
