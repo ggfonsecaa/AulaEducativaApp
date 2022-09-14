@@ -11,6 +11,11 @@ namespace AulaEducativa.App.Dominio.Entidades
         public string Nombre { get; set; }
 
         [Required(ErrorMessage = "Este campo es requerido")]
+        [Display(Name = "Descripción")]
+        [StringLength(255, ErrorMessage = "El campo no debe tener más de 255 caracteres")]
+        public string Descripcion { get; set; }
+
+        [Required(ErrorMessage = "Este campo es requerido")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Display(Name = "Fecha límite")]
