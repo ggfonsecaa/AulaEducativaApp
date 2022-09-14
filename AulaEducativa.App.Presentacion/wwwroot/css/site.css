@@ -2,12 +2,30 @@
     padding: 0;
     margin: 2px;
     box-sizing: border-box;
+    font-weight: bold;
 }
 .btn {
     background-color: rgb(255, 0, 0);
     color: rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
+    width: 100px;
 }
+.mb-3{
+    max-width:auto ;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.formulogin{   
+    margin-top: 5%;
+
+    
+ }
+ .mb-bt1{
+    margin-left: 45%;
+    
+
+ }
+
 html {
   font-size: 14px;
 }
