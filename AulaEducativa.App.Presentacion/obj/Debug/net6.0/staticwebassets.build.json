@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3FuIQJt9dGm4LBuLsfDfHJno6fDovyS/NCHvN/qj1OA=",
+  "Hash": "oDmz4830ORAc2MQ1pMfjqBMLdtou5wlezWoKeI0aqhQ=",
   "Source": "AulaEducativa.App.Presentacion",
   "BasePath": "_content/AulaEducativa.App.Presentacion",
   "Mode": "Default",
@@ -68,12 +68,12 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\HGCIII\\EducaApp\\AulaEducativaApp\\AulaEducativa.App.Presentacion\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\HGCIII\\EducaApp\\AulaEducativaApp\\AulaEducativa.App.Presentacion\\wwwroot\\favicon-32x32.ico",
       "SourceId": "AulaEducativa.App.Presentacion",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HGCIII\\EducaApp\\AulaEducativaApp\\AulaEducativa.App.Presentacion\\wwwroot\\",
       "BasePath": "_content/AulaEducativa.App.Presentacion",
-      "RelativePath": "favicon.ico",
+      "RelativePath": "favicon-32x32.ico",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -82,7 +82,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.ico"
+      "OriginalItemSpec": "wwwroot\\favicon-32x32.ico"
     },
     {
       "Identity": "C:\\Users\\HGCIII\\EducaApp\\AulaEducativaApp\\AulaEducativa.App.Presentacion\\wwwroot\\icons\\LogoEducaApp.jpg",
