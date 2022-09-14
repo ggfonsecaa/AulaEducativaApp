@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EducApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AulaEducativa.App.Presentacion.styles.css" asp-append-version="true" />
+    <link rel="shortcut icon" href="~/wwwroot/favicon.ico" />
+
+</head>
+<body>
+    <header class = "navigation-header">
+        <nav>
+            <div class="navigation-app-data">
+                <div class="app-logo">
+                    <a href="/">
+                        <img src="~/icons/LogoEducaApp.png" height="90" width="90" />
+                    </a>
+                </div>
+                <div class="app-name">
+                    <h4>Aula Educativa - EducApp</h4>
+                </div>
+            </div>
+            <div class="navigation-options">
+                <a href="/">
+                    <img src="~/icons/Raster.png" height="30" width="30"/>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class = "main-content">
+        <div class = "navigation-menu">
+            <aside style="width: 100%; height: 100%; display: flex;">
+                <div style="display: flex; flex-direction: column; width: 100%;">
+                    <div class="user-info">
+                        <div class="user-foto">
+                            <img src="~/icons/user-logo.png" height="40" width="40"/>
+                        </div>
+                        <div class="user-section">
+                            <div class="user-name">Guillermo Fonseca Aguilar</div>
+                            <div class="user-grade">Grado: Primero</div>
+                        </div>
+                        
+                    </div>
+                    <div class="main-menu">
+                        <ul>
+                            <li class="menu-item">
+                                <a asp-page="/Inscripcion/Index">
+                                    Incripción de materias
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a asp-page="/Materias/Index">
+                                    Materias en curso
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a asp-page="/Actividades/Index">
+                                    Actividades
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">
+                                    Calificaciones
+                                </a>
+                            </li>
+                        </ul>
+                        <div>
+                            <hr>
+                            <ul>
+                                <li class="menu-item">
+                                    <a href="#">
+                                        Perfil
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+
+        <div class = "content">
+            <main role="main">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+    
+
+    <footer class="footer">
+        <div>
+            &copy; 2022 - Aula Educativa - Grupo 47 - Grupo 4
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

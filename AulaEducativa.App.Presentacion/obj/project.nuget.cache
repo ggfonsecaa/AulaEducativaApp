@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2i9W6Jj+Ncplopyiv7cSpy6/a4cAs1DOqQbpRPwaawMjA4w1ba2RwiBlmlw2en6m00Np/OxOuAC0hsTvG5ABMw==",
+  "dgSpecHash": "fTkjvwWLPwmUVfkqGoVCqm8QVIambj5tnF9tbXH/DvjfDYN0xjqAhn6hpa9rsPUYECSq/UOpfGEn0tgmm24Fyg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HGCIII\\EducaApp\\AulaEducativaApp\\AulaEducativa.App.Presentacion\\AulaEducativa.App.Presentacion.csproj",
+  "projectFilePath": "C:\\Users\\HGCIII\\EducaApp\\AulaEducativaApp\\AulaEducativa.App.presentacion\\AulaEducativa.App.Presentacion.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HGCIII\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\HGCIII\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
