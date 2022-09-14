@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HGCIII\\EducaApp\\AulaEducativaApp\\AulaEducativa.App.presentacion\\AulaEducativa.App.Presentacion.csproj": {}
+    "C:\\Users\\HGCIII\\EducaApp\\AulaEducativaApp\\AulaEducativa.App.Presentacion\\AulaEducativa.App.Presentacion.csproj": {}
   },
   "projects": {
     "C:\\Users\\HGCIII\\EducaApp\\AulaEducativaApp\\AulaEducativa.App.Dominio\\AulaEducativa.App.Dominio.csproj": {
@@ -136,14 +136,14 @@
         }
       }
     },
-    "C:\\Users\\HGCIII\\EducaApp\\AulaEducativaApp\\AulaEducativa.App.presentacion\\AulaEducativa.App.Presentacion.csproj": {
+    "C:\\Users\\HGCIII\\EducaApp\\AulaEducativaApp\\AulaEducativa.App.Presentacion\\AulaEducativa.App.Presentacion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HGCIII\\EducaApp\\AulaEducativaApp\\AulaEducativa.App.presentacion\\AulaEducativa.App.Presentacion.csproj",
+        "projectUniqueName": "C:\\Users\\HGCIII\\EducaApp\\AulaEducativaApp\\AulaEducativa.App.Presentacion\\AulaEducativa.App.Presentacion.csproj",
         "projectName": "AulaEducativa.App.Presentacion",
-        "projectPath": "C:\\Users\\HGCIII\\EducaApp\\AulaEducativaApp\\AulaEducativa.App.presentacion\\AulaEducativa.App.Presentacion.csproj",
+        "projectPath": "C:\\Users\\HGCIII\\EducaApp\\AulaEducativaApp\\AulaEducativa.App.Presentacion\\AulaEducativa.App.Presentacion.csproj",
         "packagesPath": "C:\\Users\\HGCIII\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HGCIII\\EducaApp\\AulaEducativaApp\\AulaEducativa.App.presentacion\\obj\\",
+        "outputPath": "C:\\Users\\HGCIII\\EducaApp\\AulaEducativaApp\\AulaEducativa.App.Presentacion\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HGCIII\\AppData\\Roaming\\NuGet\\NuGet.Config"
