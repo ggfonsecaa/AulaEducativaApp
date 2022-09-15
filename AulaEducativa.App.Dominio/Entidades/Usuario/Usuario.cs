@@ -17,6 +17,6 @@ namespace AulaEducativa.App.Dominio.Entidades
         public string Contrasena { get; set; }
         public int InstitucionId { get; set; } 
         public virtual Institucion? Institucion { get; set; }
-
+//hola
     }
 }
