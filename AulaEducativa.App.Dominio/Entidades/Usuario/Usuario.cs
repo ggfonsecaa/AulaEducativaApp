@@ -18,16 +18,5 @@ namespace AulaEducativa.App.Dominio.Entidades
         public int InstitucionId { get; set; } 
         public virtual Institucion? Institucion { get; set; }
 
-        public bool IniciarSesion(){
-            return false;
-        }
-
-        public bool RegistrarUsuario() {
-            return false;
-        }
-
-        public void CerrarSesion() {
-            
-        }
     }
 }

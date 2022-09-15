@@ -19,21 +19,5 @@ namespace AulaEducativa.App.Dominio.Entidades
         public virtual ICollection<Actividad>? Actividades { get; set; }
         public virtual ICollection<Estudiante>? Estudiantes { get; set; } 
 
-
-        public void InscribirMateria() {
-
-        }
-
-        public void RemoverMateria() {
-
-        }
-
-        public List<Estudiante> ConsultarEstudiantes() {
-            return null;
-        }
-
-        public Profesor ConsultarProfesor() {
-            return null;
-        }
     }
 }

@@ -11,9 +11,5 @@ namespace AulaEducativa.App.Dominio.Interfaces
         public string? Telefono { get; set; }
         public int UsuarioId { get; set; }
 
-
-        public IPersona ActualizarInformacion(IPersona persona);
-        public IPersona ConsultarInformacion(IPersona persona);
-        public void AsignarGrado(GradoAcademico gradoAcademico);
     }
 }

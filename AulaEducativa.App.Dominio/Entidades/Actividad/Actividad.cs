@@ -35,29 +35,5 @@ namespace AulaEducativa.App.Dominio.Entidades
         public virtual Estudiante Estudiante { get; set; }
         public virtual Materia Materia { get; set; }
 
-
-        public void AgregarAdjunto(object adjunto) {
-
-        }
-
-        public object ConsultarAdjunto() {
-            return null;
-        }
-
-        public void CrearActividad() {
-
-        }
-
-        public Actividad ConsultarActividad() {
-            return null;
-        }
-
-        public void EntregarActividad() {
-
-        }
-
-        public void CalificarActividad(string calificacion) {
-
-        }
     }
 }

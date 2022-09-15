@@ -28,16 +28,5 @@ namespace AulaEducativa.App.Dominio.Entidades
         public virtual Usuario? Usuario { get; set; }
         public virtual GradoAcademico? GradoAcademico { get; set; }
 
-        public IPersona ActualizarInformacion(IPersona estudiante) {
-            return null;
-        }
-
-        public IPersona ConsultarInformacion(IPersona estudiante) {
-            return null;
-        }
-
-        public void AsignarGrado(GradoAcademico gradoAcademico) {
-
-        }
     }
 }
