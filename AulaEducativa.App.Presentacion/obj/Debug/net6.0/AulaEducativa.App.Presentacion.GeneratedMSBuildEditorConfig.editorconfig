@@ -8,89 +8,93 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AulaEducativa.App.Presentacion
 build_property.RootNamespace = AulaEducativa.App.Presentacion
-build_property.ProjectDir = c:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\
+build_property.ProjectDir = C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = c:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion
+build_property.MSBuildProjectDirectory = C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Actividades/Agregar.cshtml]
+[C:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Actividades/Agregar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0aXZpZGFkZXNcQWdyZWdhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Actividades/Detalle.cshtml]
+[C:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Actividades/Detalle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0aXZpZGFkZXNcRGV0YWxsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Actividades/Editar.cshtml]
+[C:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Actividades/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0aXZpZGFkZXNcRWRpdGFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Actividades/Eliminar.cshtml]
+[C:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Actividades/Eliminar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0aXZpZGFkZXNcRWxpbWluYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Actividades/Index.cshtml]
+[C:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Actividades/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0aXZpZGFkZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Error.cshtml]
+[C:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Index.cshtml]
+[C:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Inscripcion/Index.cshtml]
+[C:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Inscripcion/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zY3JpcGNpb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Instituciones/Agregar.cshtml]
+[C:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Instituciones/Agregar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zdGl0dWNpb25lc1xBZ3JlZ2FyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Instituciones/Editar.cshtml]
+[C:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Instituciones/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zdGl0dWNpb25lc1xFZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Instituciones/Eliminar.cshtml]
+[C:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Instituciones/Eliminar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zdGl0dWNpb25lc1xFbGltaW5hci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Instituciones/Index.cshtml]
+[C:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Instituciones/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zdGl0dWNpb25lc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Materias/Index.cshtml]
+[C:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Materias/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWF0ZXJpYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/PerfilEstudiante/Editar.cshtml]
+[C:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/PerfilEstudiante/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyZmlsRXN0dWRpYW50ZVxFZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/PerfilEstudiante/Index.cshtml]
+[C:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/PerfilEstudiante/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyZmlsRXN0dWRpYW50ZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Privacy.cshtml]
+[C:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Shared/_PartialLayoutusuarios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9QYXJ0aWFsTGF5b3V0dXN1YXJpb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/_ViewImports.cshtml]
+[C:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/_ViewStart.cshtml]
+[C:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Shared/_Layout.cshtml]
+[C:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-gh5lkr90c1
