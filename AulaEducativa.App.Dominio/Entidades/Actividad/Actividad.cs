@@ -29,7 +29,7 @@ namespace AulaEducativa.App.Dominio.Entidades
         [StringLength(30, ErrorMessage = "El campo no debe tener más de 30 caracteres")]
         [Display(Name = "Calificación")]
         public string? Calificacion { get; set; }
-        public string? Adjunto { get; set;}
+        public byte[]? Adjunto { get; set;}
         public int EstudianteId { get; set; }
         public int MateriaId { get; set; }
         public virtual Estudiante Estudiante { get; set; }

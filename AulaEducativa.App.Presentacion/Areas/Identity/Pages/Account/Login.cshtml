@@ -1,0 +1,56 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Ingresar";
+}
+
+@if (Model.Type == "Estudiante") 
+{ 
+    <h3 style="margin-bottom: 15px; text-align: center;">Ingreso de estudiantes</h3>
+}
+else if (Model.Type == "Profesor")
+{
+    <h3 style="margin-bottom: 15px; text-align: center;">Ingreso de profesores</h3>
+}
+
+<div class="form-login">
+    <form id="account" method="post">
+        <div class="form-group mb-3">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <label asp-for="Input.Email" class="form-label"></label>
+            <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
+            <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con nadie más.</div>
+            <span asp-validation-for="Input.Email" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Input.Password" class="form-label"></label>
+            <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" />
+            <span asp-validation-for="Input.Password" class="text-danger"></span>
+        </div>
+        <div class="mb-3 form-check">
+            <div class="checkbox">
+                <label asp-for="Input.RememberMe" class="form-label">
+                    <input class="form-check-input" asp-for="Input.RememberMe" />
+                    @Html.DisplayNameFor(m => m.Input.RememberMe)
+                </label>
+            </div>
+        </div>
+        <div class="form-group mb-3 row d-flex justify-content-center">
+            <div class="col-md-5">
+                <button class="btn btn-primary" type="submit" asp-route-type="@Model.Type">
+                    <p style="padding: 0; margin: 0;"sty>Ingresar</p>
+                </button>
+            </div>
+            <div class="col-md-5">
+                <button class="btn btn-secondary">
+                        <a asp-page="./Register" style="color: white; text-decoration: none; width: 100%; height: 100%;" asp-route-type="@Model.Type" asp-route-returnUrl="@Model.ReturnUrl">Registrarse</a>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

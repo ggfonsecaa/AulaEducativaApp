@@ -25,7 +25,7 @@ namespace AulaEducativa.App.Dominio.Entidades
         [StringLength(10, ErrorMessage = "El campo no debe tener más de 10 caracteres")]
         public string? Telefono { get; set; }
         public int UsuarioId { get; set; }
-        public int GradoAcademicoId { get; set; }
+        public int? GradoAcademicoId { get; set; }
         public virtual Usuario? Usuario { get; set; }
         public virtual GradoAcademico? GradoAcademico { get; set; }
         public virtual ICollection<Actividad>? Actividades { get; set; }

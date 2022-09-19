@@ -1,0 +1,114 @@
+﻿@page
+@model AulaEducativa.App.Presentacion.Pages.Perfil.IndexModel
+@{
+    Layout = "_PartialLayoutusuarios";
+    ViewData["Title"] = "Perfil";
+}
+
+<h3 style="margin-bottom: 15px;">@ViewData["Title"]</h3>
+
+<div>
+    <div class="col-md-12">
+        <form method="post">
+            @if (ViewData["Perfil"] == "Estudiante")
+            {
+                <input type="hidden" asp-for="Estudiante.Id" />
+                <input type="hidden" asp-for="Estudiante.UsuarioId" />
+                <input type="hidden" asp-for="Estudiante.GradoAcademicoId" />
+                <div class="form-group col-md-12 row">
+                    <div class="col-md-5">
+                        <label class="control-label">Nombres</label>
+                        <input asp-for="Estudiante.Nombres" class="form-control" />
+                    </div>
+
+                    <div class="col-md-5">
+                        <label class="control-label">Apellidos</label>
+                        <input asp-for="Estudiante.Apellidos" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group col-md-12 row">
+                    <div class="col-md-5">
+                        <label class="control-label">Edad</label>
+                        <input asp-for="Estudiante.Edad" class="form-control" />
+                    </div>
+
+                    <div class="col-md-5">
+                        <label class="control-label">Dirección</label>
+                        <input asp-for="Estudiante.Direccion" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group col-md-12 row">
+                    <div class="col-md-5">
+                        <label class="control-label">Teléfono</label>
+                        <input asp-for="Estudiante.Telefono" class="form-control" />
+                    </div>
+
+                    <div class="col-md-5">
+                        <label class="control-label">Correo electrónico</label>
+                        <input disabled asp-for="Estudiante.Usuario.Email" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group col-md-12 row" style="margin-bottom: 20px;">
+                    <div class="col-md-5">
+                        <label class="control-label">Grado académico</label>
+                        <input disabled asp-for="Estudiante.GradoAcademico.Nombre" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Actualizar" asp-route-type="Estudiante" class="btn btn-primary" />
+                </div>
+            }
+            else 
+            {
+                <input type="hidden" asp-for="Profesor.Id" />
+                <input type="hidden" asp-for="Profesor.UsuarioId" />
+                <input type="hidden" asp-for="Profesor.GradoAcademicoId" />
+                <div class="form-group col-md-12 row">
+                    <div class="col-md-5">
+                        <label class="control-label">Nombres</label>
+                        <input asp-for="Profesor.Nombres" class="form-control" />
+                    </div>
+
+                    <div class="col-md-5">
+                        <label class="control-label">Apellidos</label>
+                        <input asp-for="Profesor.Apellidos" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group col-md-12 row">
+                    <div class="col-md-5">
+                        <label class="control-label">Edad</label>
+                        <input asp-for="Profesor.Edad" class="form-control" />
+                    </div>
+
+                    <div class="col-md-5">
+                        <label class="control-label">Dirección</label>
+                        <input asp-for="Profesor.Direccion" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group col-md-12 row">
+                    <div class="col-md-5">
+                        <label class="control-label">Teléfono</label>
+                        <input asp-for="Profesor.Telefono" class="form-control" />
+                    </div>
+
+                    <div class="col-md-5">
+                        <label class="control-label">Correo electrónico</label>
+                        <input disabled asp-for="Profesor.Usuario.Email" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Actualizar" asp-route-type="Profesor" class="btn btn-primary" />
+                </div>
+            }
+
+
+        </form>
+    </div>
+</div>

@@ -6,15 +6,8 @@ namespace AulaEducativa.App.Dominio.Entidades
 {
     public class Usuario : EntidadBase, IAgregadoRaiz
     {
-        [Required(ErrorMessage = "Este campo es requerido")]
-        [StringLength(30, ErrorMessage = "El campo no debe tener más de 30 caracteres")]
-        [DataType(DataType.EmailAddress)]
+        [StringLength(255, ErrorMessage = "El campo no debe tener más de 255 caracteres")]
         public string Email { get; set; }
-
-        [Required(ErrorMessage = "Este campo es requerido")]
-        [StringLength(30, ErrorMessage = "El campo no debe tener más de 30 caracteres")]
-        [DataType(DataType.Password)]
-        public string Contrasena { get; set; }
         public int InstitucionId { get; set; } 
         public virtual Institucion? Institucion { get; set; }
     }

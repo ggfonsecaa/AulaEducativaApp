@@ -1,0 +1,116 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Registro usuarios";
+}
+
+@if (Model.Type == "Estudiante")
+{
+    <h3 style="margin-bottom: 15px; text-align: center;">Registro de estudiantes</h3>
+
+    <div class="form-login">
+        <form id="registerForm" asp-route-tipoUsuario="Estudiante" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group mb-3">
+                <label asp-for="Input.Nombres"></label>
+                <input asp-for="Input.Nombres" class="form-control" aria-required="true" />
+                <span asp-validation-for="Input.Nombres" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Input.Apellidos"></label>
+                <input asp-for="Input.Apellidos" class="form-control" aria-required="true" />
+                <span asp-validation-for="Input.Apellidos" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Input.Email"></label>
+                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label class="control-label">Grado acádemico</label>
+                <select asp-for="Input.GradoAcademico" class="form-control"
+                    asp-items="@Model.GradosAcademicos">
+                    <option value="">-- Seleccione de la lista --</option>
+                </select>
+                <span asp-validation-for="Input.GradoAcademico" class="text-danger" />
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Input.Password"></label>
+                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Input.ConfirmPassword"></label>
+                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3 row d-flex justify-content-center">
+                <div class="col-md-5" id="registerSubmit" type="submit">
+                    <button class="btn btn-primary" type="submit">
+                        <p style="padding: 0; margin: 0;" sty>Registrar</p>
+                    </button>
+                </div>
+                <button class="btn btn-secondary">
+                    <a asp-page="Login" asp-route-type="Estudiante" style="color: white; text-decoration: none; width: 100%; height: 100%;">Regresar</a>
+                </button>
+            </div>
+        </form>
+    </div>
+}
+else if (Model.Type == "Profesor")
+{
+    <h3 style="margin-bottom: 15px; text-align: center;">Registro de profesores</h3>
+
+    <div class="form-login">
+        <form id="registerForm" asp-route-tipoUsuario="Profesor" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group mb-3">
+                <label asp-for="Input.Nombres"></label>
+                <input asp-for="Input.Nombres" class="form-control" aria-required="true" />
+                <span asp-validation-for="Input.Nombres" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Input.Apellidos"></label>
+                <input asp-for="Input.Apellidos" class="form-control" aria-required="true" />
+                <span asp-validation-for="Input.Apellidos" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Input.Email"></label>
+                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label class="control-label">Grado acádemico</label>
+                <select asp-for="Input.GradoAcademico" class="form-control"
+                    asp-items="@Model.GradosAcademicos">
+                    <option value="">-- Seleccione de la lista --</option>
+                </select>
+                <span asp-validation-for="Input.GradoAcademico" class="text-danger" />
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Input.Password"></label>
+                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Input.ConfirmPassword"></label>
+                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3 row d-flex justify-content-center">
+                <div class="col-md-5" id="registerSubmit" type="submit">
+                    <button class="btn btn-primary" type="submit">
+                        <p style="padding: 0; margin: 0;" sty>Registrar</p>
+                    </button>
+                </div>
+                <button class="btn btn-secondary">
+                    <a asp-page="Login" asp-route-type="Profesor" style="color: white; text-decoration: none; width: 100%; height: 100%;">Regresar</a>
+                </button>
+            </div>
+        </form>
+    </div>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AulaEducativa.App.Persistencia.Migrations
 {
     [DbContext(typeof(AulaEducativaContext))]
-    [Migration("20220905025921_EntidadesInicial")]
-    partial class EntidadesInicial
+    [Migration("20220919015518_EntityInitial")]
+    partial class EntityInitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -32,18 +32,22 @@ namespace AulaEducativa.App.Persistencia.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("Adjunto")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<byte[]>("Adjunto")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Calificacion")
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("Descripcion")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<int>("EstudianteId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaEntrega")
+                    b.Property<DateTime?>("FechaEntrega")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("FechaLimite")
@@ -54,7 +58,8 @@ namespace AulaEducativa.App.Persistencia.Migrations
 
                     b.Property<string>("Nombre")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.HasKey("Id");
 
@@ -75,25 +80,27 @@ namespace AulaEducativa.App.Persistencia.Migrations
 
                     b.Property<string>("Apellidos")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("Direccion")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
-                    b.Property<int>("Edad")
+                    b.Property<int?>("Edad")
                         .HasColumnType("int");
 
-                    b.Property<int>("GradoAcademicoId")
+                    b.Property<int?>("GradoAcademicoId")
                         .HasColumnType("int");
 
                     b.Property<string>("Nombres")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("Telefono")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<int>("UsuarioId")
                         .HasColumnType("int");
@@ -117,7 +124,8 @@ namespace AulaEducativa.App.Persistencia.Migrations
 
                     b.Property<string>("Nombre")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.HasKey("Id");
 
@@ -134,7 +142,8 @@ namespace AulaEducativa.App.Persistencia.Migrations
 
                     b.Property<string>("Nombre")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.HasKey("Id");
 
@@ -154,7 +163,8 @@ namespace AulaEducativa.App.Persistencia.Migrations
 
                     b.Property<string>("Nombre")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.HasKey("Id");
 
@@ -173,25 +183,28 @@ namespace AulaEducativa.App.Persistencia.Migrations
 
                     b.Property<string>("Apellidos")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("Direccion")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
-                    b.Property<int>("Edad")
+                    b.Property<int?>("Edad")
+                        .HasMaxLength(100)
                         .HasColumnType("int");
 
-                    b.Property<int>("GradoAcademicoId")
+                    b.Property<int?>("GradoAcademicoId")
                         .HasColumnType("int");
 
                     b.Property<string>("Nombres")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("Telefono")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<int>("UsuarioId")
                         .HasColumnType("int");
@@ -213,13 +226,10 @@ namespace AulaEducativa.App.Persistencia.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("Contrasena")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<int>("InstitucionId")
                         .HasColumnType("int");
@@ -269,9 +279,7 @@ namespace AulaEducativa.App.Persistencia.Migrations
                 {
                     b.HasOne("AulaEducativa.App.Dominio.Entidades.GradoAcademico", "GradoAcademico")
                         .WithMany("Estudiantes")
-                        .HasForeignKey("GradoAcademicoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("GradoAcademicoId");
 
                     b.HasOne("AulaEducativa.App.Dominio.Entidades.Usuario", "Usuario")
                         .WithMany()
@@ -299,9 +307,7 @@ namespace AulaEducativa.App.Persistencia.Migrations
                 {
                     b.HasOne("AulaEducativa.App.Dominio.Entidades.GradoAcademico", "GradoAcademico")
                         .WithMany("Profesores")
-                        .HasForeignKey("GradoAcademicoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("GradoAcademicoId");
 
                     b.HasOne("AulaEducativa.App.Dominio.Entidades.Usuario", "Usuario")
                         .WithMany()

@@ -1,12 +1,14 @@
 using AulaEducativa.App.Dominio.Entidades;
 using AulaEducativa.App.Persistencia.Interfaces;
 
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
 namespace AulaEducativa.App.Presentacion.Pages.Instituciones
 {
+    [Authorize]
     public class EliminarModel : PageModel
     {
         private readonly IUnidadDeTrabajo _unidadDeTrabajo;

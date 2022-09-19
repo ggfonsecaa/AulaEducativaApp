@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AulaEducativa.App.Persistencia.Migrations
 {
-    public partial class EntidadesInicial : Migration
+    public partial class EntityInitial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,7 +15,7 @@ namespace AulaEducativa.App.Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Nombre = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -28,7 +28,7 @@ namespace AulaEducativa.App.Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Nombre = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -41,7 +41,7 @@ namespace AulaEducativa.App.Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Nombre = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     GradoAcademicoId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -61,8 +61,7 @@ namespace AulaEducativa.App.Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Contrasena = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     InstitucionId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -82,13 +81,13 @@ namespace AulaEducativa.App.Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombres = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Apellidos = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Edad = table.Column<int>(type: "int", nullable: false),
-                    Direccion = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Telefono = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Nombres = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    Apellidos = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    Edad = table.Column<int>(type: "int", nullable: true),
+                    Direccion = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    Telefono = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true),
                     UsuarioId = table.Column<int>(type: "int", nullable: false),
-                    GradoAcademicoId = table.Column<int>(type: "int", nullable: false)
+                    GradoAcademicoId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -97,8 +96,7 @@ namespace AulaEducativa.App.Persistencia.Migrations
                         name: "FK_Estudiante_GradoAcademico_GradoAcademicoId",
                         column: x => x.GradoAcademicoId,
                         principalTable: "GradoAcademico",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Estudiante_Usuario_UsuarioId",
                         column: x => x.UsuarioId,
@@ -113,13 +111,13 @@ namespace AulaEducativa.App.Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombres = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Apellidos = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Edad = table.Column<int>(type: "int", nullable: false),
-                    Direccion = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Telefono = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Nombres = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    Apellidos = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    Edad = table.Column<int>(type: "int", maxLength: 100, nullable: true),
+                    Direccion = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    Telefono = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true),
                     UsuarioId = table.Column<int>(type: "int", nullable: false),
-                    GradoAcademicoId = table.Column<int>(type: "int", nullable: false)
+                    GradoAcademicoId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -128,8 +126,7 @@ namespace AulaEducativa.App.Persistencia.Migrations
                         name: "FK_Profesor_GradoAcademico_GradoAcademicoId",
                         column: x => x.GradoAcademicoId,
                         principalTable: "GradoAcademico",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Profesor_Usuario_UsuarioId",
                         column: x => x.UsuarioId,
@@ -144,11 +141,12 @@ namespace AulaEducativa.App.Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Nombre = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    Descripcion = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     FechaLimite = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    FechaEntrega = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Calificacion = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Adjunto = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FechaEntrega = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Calificacion = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
+                    Adjunto = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
                     EstudianteId = table.Column<int>(type: "int", nullable: false),
                     MateriaId = table.Column<int>(type: "int", nullable: false)
                 },

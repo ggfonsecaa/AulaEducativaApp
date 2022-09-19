@@ -279,8 +279,6 @@ C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.AspNetCore.CookiePolicy.dll
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cors.dll
-C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.AspNetCore.DataProtection.dll
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
@@ -364,14 +362,11 @@ C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.Extensions.Features.dll
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Composite.dll
-C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.Extensions.Hosting.dll
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.Extensions.Http.dll
-C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.Extensions.Identity.Core.dll
-C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.Extensions.Localization.dll
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
@@ -1112,3 +1107,11 @@ C:\Users\HGCIII\EducaApp\AulaEducativaApp\AulaEducativa.App.Presentacion\obj\Deb
 C:\Users\HGCIII\EducaApp\AulaEducativaApp\AulaEducativa.App.Presentacion\obj\Debug\net6.0\AulaEducativa.App.Presentacion.pdb
 C:\Users\HGCIII\EducaApp\AulaEducativaApp\AulaEducativa.App.Presentacion\obj\Debug\net6.0\AulaEducativa.App.Presentacion.genruntimeconfig.cache
 C:\Users\HGCIII\EducaApp\AulaEducativaApp\AulaEducativa.App.Presentacion\obj\Debug\net6.0\ref\AulaEducativa.App.Presentacion.dll
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\obj\Debug\net6.0\scopedcss\Areas\Identity\Pages\Shared\_Layout.cshtml.rz.scp.css

@@ -40,7 +40,7 @@
                         }
                     </td>
                     <td class="col-md-2">
-                        @if (item.Estudiantes.Any(x => x.Id == 1))
+                        @if (item.Estudiantes.Where(x => x.Id == Model.Estudiante.Id).FirstOrDefault() != null)
                         {
                             <input type="submit" value="Eliminar" asp-route-id="@item.Id" asp-route-action="delete" class="btn btn-danger" />
                         } 
