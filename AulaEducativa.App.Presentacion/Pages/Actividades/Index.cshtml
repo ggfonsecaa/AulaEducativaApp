@@ -5,9 +5,10 @@
     ViewData["Title"] = "Actividades";
 }
 
+<h3 style="margin-bottom: 15px;">@ViewData["Title"]</h3>
+
 @if (Model.Actividades.Any()) 
 {
-    <h3 style="margin-bottom: 15px;">@ViewData["Title"]</h3>
 
     <table class="table table-striped table-hover">
         <thead>
@@ -37,9 +38,19 @@
                     <td class="col-md-3">
                         @Html.DisplayFor(modelItem => item.FechaLimite)
                     </td>
-                    <td class="col-md-2">
-                        <a asp-page="./Detalle" asp-route-id="@item.Id">Detalle</a>
-                    </td>
+                    @if (ViewData["Perfil"] == "Profesor")
+                    {
+                        <td class="col-md-2">
+                            <a asp-page="./Editar" asp-route-id="@item.Id">Editar</a>
+                        </td>   
+                        
+                    }
+                    else
+                    {
+                        <td class="col-md-2">
+                            <a asp-page="./Detalle" asp-route-id="@item.Id">Detalle</a>
+                        </td>
+                    }
                 </tr>
             }
         </tbody>
@@ -47,5 +58,14 @@
 }
 else
 {
-    <h3 style="margin-bottom: 15px;">Aún no hay actividades por presentar</h3>
+    @if (ViewData["Perfil"] == "Estudiante")
+    {
+        <h3 style="margin-bottom: 15px;">Aún no hay actividades por presentar</h3>
+    }
+    else
+    {
+        <button class="btn btn-primary">
+            <a asp-page="Agregar" style="color: white; text-decoration: none; width: 100%; height: 100%;">Crear nueva</a>
+        </button>
+    }
 }
