@@ -1,28 +1,66 @@
 ﻿@page
 @model AulaEducativa.App.Presentacion.Pages.Actividades.AgregarModel
 
+
 @{
     Layout = "_PartialLayoutusuarios";
-    ViewData["Title"] = "Instituciones";
+    ViewData["Title"] = "Nueva actividad";
 }
 
 <h3 style="margin-bottom: 15px;">@ViewData["Title"]</h3>
 
 <div>
-    <div class="col-md-4">
+    <div class="col-md-12">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group" style="margin-bottom: 20px;">
-                <label asp-for="Institucion.Nombre" class="control-label"></label>
-                <input asp-for="Institucion.Nombre" class="form-control" />
-                <span asp-validation-for="Institucion.Nombre" class="text-danger"></span>
+            <div class="form-group col-md-12 row">
+                <div class="col-md-3">
+                    <label class="control-label">Materia</label>
+                    <select asp-for="Actividad.MateriaId" class="form-control"
+                            asp-items="@Model.Materias">
+                        <option value="">-- Seleccione de la lista --</option>
+                    </select>
+                    <span asp-validation-for="Actividad.MateriaId" class="text-danger" />
+                </div>
+
+                <div class="col-md-3">
+                    <label class="control-label">Nombre actividad</label>
+                    <input asp-for="Actividad.Nombre" class="form-control" />
+                </div>
+
+                <div class="col-md-3">
+                    <label asp-for="Actividad.FechaLimite" class="control-label"></label>
+                    <input asp-for="Actividad.FechaLimite" class="form-control" />
+                </div>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Agregar" class="btn btn-primary" />
-                <button class="btn btn-secondary">
-                    <a asp-page="Index" style="color: white; text-decoration: none; width: 100%; height: 100%;">Regresar</a>
-                </button>
+
+            <div class="form-group col-md-12 row">
+                <div class="col-md-3">
+                    <label asp-for="Actividad.Calificacion" class="control-label"></label>
+                    <input disabled asp-for="Actividad.Calificacion" class="form-control" />
+                </div>
+
+                <div class="col-md-6">
+                    <label class="control-label">Asignar a</label>
+                    <select asp-for="Actividad.EstudianteId" class="form-control"
+                            asp-items="@Model.Estudiantes">
+                        <option value="">-- Seleccione de la lista --</option>
+                    </select>
+                    <span asp-validation-for="Actividad.EstudianteId" class="text-danger" />
+                </div>
             </div>
+
+            <div class="form-group col-md-12 row">
+                <div class="col-md-12">
+                    <label asp-for="Actividad.Descripcion" class="control-label"></label>
+                    <textarea asp-for="Actividad.Descripcion" class="form-control" style="resize: none;"></textarea>
+                </div>
+            </div>
+
+            <input type="submit" value="Guardar" class="btn btn-primary" />
+            <button class="btn btn-secondary">
+                <a asp-page="Index" style="color: white; text-decoration: none; width: 100%; height: 100%;">Regresar</a>
+            </button>
         </form>
     </div>
 </div>

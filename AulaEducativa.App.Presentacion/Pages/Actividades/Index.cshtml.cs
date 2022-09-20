@@ -30,6 +30,7 @@ namespace AulaEducativa.App.Presentacion.Pages.Actividades
 
             ViewData["NombreUsuario"] = Profesor == null ? Estudiante.Nombres + " " + Estudiante.Apellidos : Profesor.Nombres + " " + Profesor.Apellidos;
             ViewData["Grado"] = Profesor == null ? Estudiante.GradoAcademico.Nombre : Profesor.GradoAcademico.Nombre;
+            ViewData["Perfil"] = Profesor == null ? "Estudiante" : "Profesor";
 
             Actividades = _unidadDeTrabajo.RepositorioActividad.ObtenerPorCondicion(filter: x => x.Materia.Estudiantes.Any(e => e.Usuario.Email == _email), includeProperties: "Materia,Estudiante,Estudiante.Usuario");
         }
