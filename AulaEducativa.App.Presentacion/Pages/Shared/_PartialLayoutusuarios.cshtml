@@ -79,26 +79,37 @@
                         </div>
                     <div class="main-menu">
                         <ul>
-                            <li class="menu-item">
-                                <a asp-page="/Inscripcion/Index">
-                                    Incripción de materias
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a asp-page="/Materias/Index">
-                                    Materias en curso
-                                </a>
-                            </li>
+                            @if (ViewData["Perfil"] == "Estudiante") 
+                            { 
+                                <li class="menu-item">
+                                    <a asp-page="/Inscripcion/Index">
+                                        Incripción de materias
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a asp-page="/Materias/Index">
+                                        Materias en curso
+                                    </a>
+                                </li>
+                            }
                             <li class="menu-item">
                                 <a asp-page="/Actividades/Index">
                                     Actividades
                                 </a>
                             </li>
                             <li class="menu-item">
-                                <a href="#">
+                                <a asp-page="/Calificaciones/Index">
                                     Calificaciones
                                 </a>
                             </li>
+                            @if (ViewData["Perfil"] == "Profesor")
+                            {
+                                <li class="menu-item">
+                                    <a asp-page="/Estudiantes/Index">
+                                        Lista de estudiantes
+                                    </a>
+                                </li>
+                            }
                         </ul>
                         <div>
                             <hr>

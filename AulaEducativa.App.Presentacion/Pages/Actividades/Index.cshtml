@@ -42,8 +42,7 @@
                     {
                         <td class="col-md-2">
                             <a asp-page="./Editar" asp-route-id="@item.Id">Editar</a>
-                        </td>   
-                        
+                        </td>    
                     }
                     else
                     {
@@ -55,6 +54,14 @@
             }
         </tbody>
     </table>
+
+    @if (ViewData["Perfil"] == "Profesor")
+    {
+        <button class="btn btn-primary">
+            <a asp-page="Agregar" style="color: white; text-decoration: none; width: 100%; height: 100%;">Crear nueva</a>
+        </button>
+    }
+
 }
 else
 {
