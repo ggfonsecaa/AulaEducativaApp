@@ -1,0 +1,47 @@
+﻿@page
+@model AulaEducativa.App.Presentacion.Pages.Estudiantes.IndexModel
+@{
+    Layout = "_PartialLayoutusuarios";
+    ViewData["Title"] = "Lista de estudiantes";
+}
+
+@if (Model.Estudiantes.Any())
+{
+    <h3 style="margin-bottom: 15px;">@ViewData["Title"]</h3>
+
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Estudiantes.ElementAt(0).Nombres)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Estudiantes.ElementAt(0).Apellidos)
+                </th>
+                <th>
+                    Grado académico
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Estudiantes)
+            {
+                <tr class="row-cols-auto">
+                    <td class="col-md-4">
+                        @Html.DisplayFor(modelItem => item.Nombres)
+                    </td>
+                    <td class="col-md-4">
+                        @Html.DisplayFor(modelItem => item.Apellidos)
+                    </td>
+                    <td class="col-md-4">
+                        @Html.DisplayFor(modelItem => item.GradoAcademico.Nombre)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h3 style="margin-bottom: 15px;">No hay estudiantes inscritos</h3>
+}

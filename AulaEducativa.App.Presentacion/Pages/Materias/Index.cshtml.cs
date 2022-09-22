@@ -32,6 +32,7 @@ namespace AulaEducativa.App.Presentacion.Pages.Materias
 
             ViewData["NombreUsuario"] = Profesor == null ? Estudiante.Nombres + " " + Estudiante.Apellidos : Profesor.Nombres + " " + Profesor.Apellidos;
             ViewData["Grado"] = Profesor == null ? Estudiante.GradoAcademico.Nombre : Profesor.GradoAcademico.Nombre;
+            ViewData["Perfil"] = Profesor == null ? "Estudiante" : "Profesor";
             Materias = _unidadDeTrabajo.RepositorioMateria.ObtenerPorCondicion(filter: e => e.Estudiantes.Any(x => x.Usuario.Email == _email), includeProperties: "GradoAcademico,GradoAcademico.Profesores,Estudiantes,Estudiantes.Usuario");
         }
     }

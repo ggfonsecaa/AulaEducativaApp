@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace AulaEducativa.App.Presentacion.Pages.Actividades
+using System.Net.Mail;
+
+namespace AulaEducativa.App.Presentacion.Pages.Estudiantes
 {
     [Authorize]
     public class IndexModel : PageModel
@@ -14,7 +16,7 @@ namespace AulaEducativa.App.Presentacion.Pages.Actividades
         private string _email;
 
         [BindProperty]
-        public IEnumerable<Actividad> Actividades{ get; set; }
+        public IEnumerable<Estudiante> Estudiantes { get; set; }
         public Estudiante Estudiante { get; set; }
         public Profesor Profesor { get; set; }
 
@@ -31,15 +33,7 @@ namespace AulaEducativa.App.Presentacion.Pages.Actividades
             ViewData["NombreUsuario"] = Profesor == null ? Estudiante.Nombres + " " + Estudiante.Apellidos : Profesor.Nombres + " " + Profesor.Apellidos;
             ViewData["Grado"] = Profesor == null ? Estudiante.GradoAcademico.Nombre : Profesor.GradoAcademico.Nombre;
             ViewData["Perfil"] = Profesor == null ? "Estudiante" : "Profesor";
-
-            if (ViewData["Perfil"] == "Estudiante")
-            {
-                Actividades = _unidadDeTrabajo.RepositorioActividad.ObtenerPorCondicion(filter: x => x.Materia.Estudiantes.Any(e => e.Usuario.Email == _email), includeProperties: "Materia,Estudiante,Estudiante.Usuario");
-            }
-            else 
-            {
-                Actividades = _unidadDeTrabajo.RepositorioActividad.ObtenerPorCondicion(filter: x => x.Materia.GradoAcademicoId == Profesor.GradoAcademicoId, includeProperties: "Materia");
-            }
+            Estudiantes = _unidadDeTrabajo.RepositorioEstudiante.ObtenerPorCondicion(filter: e => e.GradoAcademicoId == Profesor.GradoAcademicoId, includeProperties: "GradoAcademico");
         }
     }
 }

@@ -11,20 +11,19 @@ using Microsoft.IdentityModel.Tokens;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 
-namespace AulaEducativa.App.Presentacion.Pages.Actividades
+namespace AulaEducativa.App.Presentacion.Pages.Calificaciones
 {
     [Authorize]
     public class DetalleModel : PageModel
     {
         private readonly IUnidadDeTrabajo _unidadDeTrabajo;
         private string _email;
-
-        public Actividad Actividad { get; set; }
         public Estudiante Estudiante { get; set; }
         public Profesor Profesor { get; set; }
+        public AdjuntoModel Adjunto { get; set; }
 
         [BindProperty]
-        public AdjuntoModel Adjunto { get; set; }
+        public Actividad Actividad { get; set; }
 
         public DetalleModel(IUnidadDeTrabajo unidadDeTrabajo)
         {
@@ -40,7 +39,7 @@ namespace AulaEducativa.App.Presentacion.Pages.Actividades
         public void OnGet(int id)
         {
             _email = User.Claims.FirstOrDefault(x => x.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress").Value;
-            Estudiante = _unidadDeTrabajo.RepositorioEstudiante.ObtenerPorCondicion(filter: x => x.Usuario.Email == _email, includeProperties: "Materias,Usuario,GradoAcademico", tracking: true).FirstOrDefault();
+            Estudiante = _unidadDeTrabajo.RepositorioEstudiante.ObtenerPorCondicion(filter: x => x.Usuario.Email == _email, includeProperties: "Materias,Usuario,GradoAcademico").FirstOrDefault();
             Profesor = _unidadDeTrabajo.RepositorioProfesor.ObtenerPorCondicion(filter: x => x.Usuario.Email == _email, includeProperties: "Usuario,GradoAcademico").FirstOrDefault();
 
             ViewData["NombreUsuario"] = Profesor == null ? Estudiante.Nombres + " " + Estudiante.Apellidos : Profesor.Nombres + " " + Profesor.Apellidos;
@@ -55,29 +54,17 @@ namespace AulaEducativa.App.Presentacion.Pages.Actividades
             }
         }
 
-        public async Task<IActionResult> OnPostAsync(int id)
+        public async Task<IActionResult> OnPostAsync()
         {
             _email = User.Claims.FirstOrDefault(x => x.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress").Value;
-            Estudiante = _unidadDeTrabajo.RepositorioEstudiante.ObtenerPorCondicion(filter: x => x.Usuario.Email == _email, includeProperties: "Materias,Usuario,GradoAcademico", tracking: true).FirstOrDefault();
+            Estudiante = _unidadDeTrabajo.RepositorioEstudiante.ObtenerPorCondicion(filter: x => x.Usuario.Email == _email, includeProperties: "Materias,Usuario,GradoAcademico").FirstOrDefault();
             Profesor = _unidadDeTrabajo.RepositorioProfesor.ObtenerPorCondicion(filter: x => x.Usuario.Email == _email, includeProperties: "Usuario,GradoAcademico").FirstOrDefault();
 
             ViewData["NombreUsuario"] = Profesor == null ? Estudiante.Nombres + " " + Estudiante.Apellidos : Profesor.Nombres + " " + Profesor.Apellidos;
             ViewData["Grado"] = Profesor == null ? Estudiante.GradoAcademico.Nombre : Profesor.GradoAcademico.Nombre;
             ViewData["Perfil"] = Profesor == null ? "Estudiante" : "Profesor";
-            Actividad = _unidadDeTrabajo.RepositorioActividad.ObtenerPorCondicion(filter: a => a.Id == id).FirstOrDefault();
-
-            if (Adjunto.AdjuntoActividad != null) 
-            { 
-                var stream = new MemoryStream();
-                await Adjunto.AdjuntoActividad.CopyToAsync(stream);
-                Actividad.Adjunto = stream.ToArray();
-                Actividad.FechaEntrega = DateTime.Now;
-            }
-
-            if (!ModelState.IsValid || _unidadDeTrabajo.RepositorioActividad == null)
-            {
-                return Page();
-            }
+            //Actividad = _unidadDeTrabajo.RepositorioActividad.ObtenerPorCondicion(filter: a => a.Id == id).FirstOrDefault();
+            //Actividad.Calificacion = calificacion;
 
             _unidadDeTrabajo.RepositorioActividad.Actualizar(Actividad);
             await _unidadDeTrabajo.GuardarAsincrono();

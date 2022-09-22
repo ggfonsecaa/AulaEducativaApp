@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace AulaEducativa.App.Presentacion.Pages.Actividades
+using System.Net.Mail;
+
+namespace AulaEducativa.App.Presentacion.Pages.Calificaciones
 {
     [Authorize]
     public class IndexModel : PageModel
@@ -14,7 +16,7 @@ namespace AulaEducativa.App.Presentacion.Pages.Actividades
         private string _email;
 
         [BindProperty]
-        public IEnumerable<Actividad> Actividades{ get; set; }
+        public IEnumerable<Actividad> Actividades { get; set; }
         public Estudiante Estudiante { get; set; }
         public Profesor Profesor { get; set; }
 
@@ -25,7 +27,7 @@ namespace AulaEducativa.App.Presentacion.Pages.Actividades
         public void OnGet()
         {
             _email = User.Claims.FirstOrDefault(x => x.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress").Value;
-            Estudiante = _unidadDeTrabajo.RepositorioEstudiante.ObtenerPorCondicion(filter: x => x.Usuario.Email == _email, includeProperties: "Materias,Usuario,GradoAcademico", tracking: true).FirstOrDefault();
+            Estudiante = _unidadDeTrabajo.RepositorioEstudiante.ObtenerPorCondicion(filter: x => x.Usuario.Email == _email, includeProperties: "Materias,Usuario,GradoAcademico").FirstOrDefault();
             Profesor = _unidadDeTrabajo.RepositorioProfesor.ObtenerPorCondicion(filter: x => x.Usuario.Email == _email, includeProperties: "Usuario,GradoAcademico").FirstOrDefault();
 
             ViewData["NombreUsuario"] = Profesor == null ? Estudiante.Nombres + " " + Estudiante.Apellidos : Profesor.Nombres + " " + Profesor.Apellidos;
@@ -38,7 +40,7 @@ namespace AulaEducativa.App.Presentacion.Pages.Actividades
             }
             else 
             {
-                Actividades = _unidadDeTrabajo.RepositorioActividad.ObtenerPorCondicion(filter: x => x.Materia.GradoAcademicoId == Profesor.GradoAcademicoId, includeProperties: "Materia");
+                Actividades = _unidadDeTrabajo.RepositorioActividad.ObtenerPorCondicion(filter: x => x.Materia.GradoAcademicoId == Profesor.GradoAcademicoId, includeProperties: "Materia,Estudiante,Estudiante.Usuario");
             }
         }
     }

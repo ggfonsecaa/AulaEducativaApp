@@ -1,0 +1,114 @@
+﻿@page
+@model AulaEducativa.App.Presentacion.Pages.Calificaciones.IndexModel
+@{
+    Layout = "_PartialLayoutusuarios";
+    ViewData["Title"] = "Calificaciones";
+}
+
+<h3 style="margin-bottom: 15px;">@ViewData["Title"]</h3>
+
+@if (Model.Actividades.Any(x => x.Calificacion != null))
+{
+
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>
+                    Materia
+                </th>
+                <th>
+                    Nombre actividad
+                </th>
+                <th>
+                    Calificacion
+                </th>
+                @if (ViewData["Perfil"] == "Profesor")
+                {
+                    <th>
+                        Acciones
+                    </th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Actividades)
+            {
+                <tr class="row-cols-auto">
+                    <td class="col-md-3">
+                        @Html.DisplayFor(modelItem => item.Materia.Nombre)
+                    </td>
+                    <td class="col-md-4">
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td class="col-md-3">
+                        @Html.DisplayFor(modelItem => item.Calificacion)
+                    </td>
+                    @if (ViewData["Perfil"] == "Profesor")
+                    {
+                        <td class="col-md-2">
+                            <a asp-page="./Detalle" asp-route-id="@item.Id">Calificar</a>
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    @if (ViewData["Perfil"] == "Estudiante")
+    {
+        <h3 style="margin-bottom: 15px;">Aún no hay actividades calificadas</h3>
+    }
+    else
+    {
+        @if (Model.Actividades.Any())
+        {
+
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            Materia
+                        </th>
+                        <th>
+                            Nombre actividad
+                        </th>
+                        <th>
+                            Calificacion
+                        </th>
+                        @if (ViewData["Perfil"] == "Profesor")
+                        {
+                            <th>
+                                Acciones
+                            </th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Actividades)
+                    {
+                        <tr class="row-cols-auto">
+                            <td class="col-md-3">
+                                @Html.DisplayFor(modelItem => item.Materia.Nombre)
+                            </td>
+                            <td class="col-md-4">
+                                @Html.DisplayFor(modelItem => item.Nombre)
+                            </td>
+                            <td class="col-md-3">
+                                @Html.DisplayFor(modelItem => item.Calificacion)
+                            </td>
+                            @if (item.Calificacion == null)
+                            {
+                                <td class="col-md-2">
+                                    <a asp-page="./Detalle" asp-route-id="@item.Id">Calificar</a>
+                                </td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            }
+        <a asp-page="../Actividades/Agregar">Crear actividad</a>
+    }
+}

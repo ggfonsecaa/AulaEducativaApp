@@ -13,7 +13,7 @@ namespace AulaEducativa.App.Dominio.Entidades
         [StringLength(30, ErrorMessage = "El campo no debe tener más de 30 caracteres")]
         public string Apellidos { get; set; }
 
-        [MaxLength(100, ErrorMessage = "El valor no debe ser mayor a 100")]
+        [Range(0, 100, ErrorMessage = "El valor no debe ser mayor a 100")]
         public int? Edad { get; set; }
 
         [Display(Name = "Dirección")]

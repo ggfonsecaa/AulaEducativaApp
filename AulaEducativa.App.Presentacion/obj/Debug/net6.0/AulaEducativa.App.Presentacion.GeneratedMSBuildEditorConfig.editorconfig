@@ -63,8 +63,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0aXZpZGFkZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Calificaciones/Detalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FsaWZpY2FjaW9uZXNcRGV0YWxsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Calificaciones/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FsaWZpY2FjaW9uZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Estudiantes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXN0dWRpYW50ZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/Users/Guillermo/source/repos/AulaEducativaApp/AulaEducativa.App.Presentacion/Pages/Index.cshtml]
