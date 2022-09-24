@@ -17,7 +17,7 @@ namespace AulaEducativa.App.Persistencia.Datos
 
         protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder) {
             if (!dbContextOptionsBuilder.IsConfigured) {
-                dbContextOptionsBuilder.UseSqlServer("Data source = (localdb)\\MSSQLLocalDB; Initial Catalog = AulaEducativaApp");
+                dbContextOptionsBuilder.UseSqlServer("Data Source=SQL8002.site4now.net;Initial Catalog=db_a8d4f8_aulaeducativaapp;User Id=db_a8d4f8_aulaeducativaapp_admin;Password=Asdf1234*");
             }
         }
     }

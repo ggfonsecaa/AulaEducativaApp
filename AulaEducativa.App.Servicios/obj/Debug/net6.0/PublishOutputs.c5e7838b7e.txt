@@ -1,0 +1,11 @@
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Servicios\bin\Debug\net6.0\publish\AulaEducativa.App.Servicios.exe
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Servicios\bin\Debug\net6.0\publish\appsettings.Development.json
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Servicios\bin\Debug\net6.0\publish\appsettings.json
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Servicios\bin\Debug\net6.0\publish\AulaEducativa.App.Servicios.dll
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Servicios\bin\Debug\net6.0\publish\AulaEducativa.App.Servicios.deps.json
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Servicios\bin\Debug\net6.0\publish\AulaEducativa.App.Servicios.runtimeconfig.json
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Servicios\bin\Debug\net6.0\publish\AulaEducativa.App.Servicios.pdb
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Servicios\bin\Debug\net6.0\publish\Microsoft.OpenApi.dll
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Servicios\bin\Debug\net6.0\publish\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Servicios\bin\Debug\net6.0\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Servicios\bin\Debug\net6.0\publish\Swashbuckle.AspNetCore.SwaggerUI.dll

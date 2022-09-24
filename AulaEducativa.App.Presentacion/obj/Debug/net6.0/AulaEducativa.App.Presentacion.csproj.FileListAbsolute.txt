@@ -1115,3 +1115,8 @@ C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\obj\Debug\net6.0\scopedcss\Areas\Identity\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Presentacion\bin\Debug\net6.0\refs\Microsoft.Extensions.Identity.Stores.dll

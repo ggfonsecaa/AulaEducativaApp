@@ -1,0 +1,3 @@
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Dominio\bin\Debug\net6.0\publish\AulaEducativa.App.Dominio.dll
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Dominio\bin\Debug\net6.0\publish\AulaEducativa.App.Dominio.deps.json
+C:\Users\Guillermo\source\repos\AulaEducativaApp\AulaEducativa.App.Dominio\bin\Debug\net6.0\publish\AulaEducativa.App.Dominio.pdb
