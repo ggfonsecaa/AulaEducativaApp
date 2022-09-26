@@ -1,0 +1,204 @@
+* {
+    padding: 0;
+    margin: 2px;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    width: 150px;
+}
+
+.mb-3 {
+    max-width: auto;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.form-login {
+    margin-top: 5%;
+
+
+}
+
+.mb-bt1 {
+    margin-left: 45%;
+
+}
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+
+}
+
+.navigation-header {
+    display: flex;
+    height: 15%;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px;
+}
+
+.navigation-app-data {
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+}
+
+.app-logo {
+    display: flow;
+    align-items: top;
+    justify-content: left;
+    height: 100%;
+    width: 10%;
+
+
+}
+
+.app-logo>img {
+    padding: 10px;
+}
+
+.app-name {
+    display: flex;
+    width: 90%;
+    align-items: center;
+}
+
+.navigation-options {
+    height: 100%;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation-options>h6 {
+    margin: 0;
+}
+
+.main-content {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    height: calc(80% - 3px);
+    border-bottom: 1px solid black;
+
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    height: 15%;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    margin-top: 60px;
+    align-items: flex-end;
+    
+}
+
+.navigation-menu {
+    display: flex;
+    width: 30%;
+    height: 100%;
+    border-right: 1px solid black;
+    align-items: center;
+}
+
+.navigation-menu .user-info {
+    display: flex;
+    margin: 5px;
+    height: 70px;
+}
+
+.navigation-menu .user-info .user-foto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+}
+
+.navigation-menu .user-info .user-section {
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+    flex-direction: column;
+    width: calc(100% - 50px);
+    
+}
+
+hr {
+    margin: 0;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.main-menu {
+    height: 100%;
+    background-color: rgb(185, 185, 185);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0%;
+    width: 100;
+    
+}
+
+.main-menu .menu-item {
+    border-radius: 5px;
+    height: 60px;
+    display: flex;
+}
+
+.main-menu .menu-item:hover {
+    background-color: rgb(255, 255, 255, 0.2);
+}
+
+.main-menu .menu-item:active {
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+.content {
+    width:  100%;
+    padding: 0px;
+}
+
+.menu-item>a {
+    font-weight: 700;
+    padding: 0px;
+    text-decoration: none;
+    color: rgb(2, 2, 2);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
